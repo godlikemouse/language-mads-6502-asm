@@ -1,0 +1,106 @@
+'scopeName': 'source.asm'
+'name': 'Assembler'
+'fileTypes': [
+  'asm'
+]
+'patterns': [
+  {
+    'include': '#line_comments'
+  }
+  {
+    'include': '#string'
+  }
+  {
+    'include': '#asmkey'
+  }
+  {
+    'include': '#hexpats'
+  }
+  {
+    'include': '#numpats'
+  }
+  {
+    'include': '#label'
+  }
+  {
+    'include': '#jumps'
+  }
+]
+'repository':
+  'string':
+    'patterns': [
+      {
+        'match': 'AF\''
+      }
+      {
+        'begin': '\''
+        'end': '\''
+        'name': 'string.quoted.single.asm'
+      }
+      {
+        'begin': '\"'
+        'end': '\"'
+        'name': 'string.quoted.double.asm'
+      }
+    ]
+  'line_comments':
+     'begin': ';'
+     'end': '\\n'
+     'name': 'comment.line.asm'
+
+  'asmkey':
+    'patterns': [
+      {
+       'match': '\\s*(?i:(icl|ins|dta|run|ini|sin|rnd|opt|org|repeat|blk|set|nmb|rmb|lmb))\\s'
+       'name': 'keyword.control.statement.asm'
+      }
+      {
+       'match': '\\s*(?i:(proc|macro|local|end|endp|endm|endp|exitm))\\s'
+       'name': 'keyword.control.statement.asm'
+      }
+      {
+       'match': '\\s*(?i:(adc|and|asl|bcc|bcs|beq|bit|bmi|bne|bpl|brk|bvc|bvs|clc|cld|cli|clv|cmp|cpx|cpy|dec|dex|dey|eor|inc|inx|iny|jmp|jsr))\\s'
+       'name': 'keyword.control.statement.asm'
+      }
+      {
+       'match': '\\s*(?i:(lda|ldx|ldy|lsr|nop|ora|pha|php|pla|plp|rol|ror|rti|rts|sbc|sec|sed|sei|sta|stx|sty|tax|tay|tsx|txa|txs|tya))\\s'
+       'name': 'keyword.control.statement.asm'
+      }
+      {
+       'match': '\\s*(?i:(req|rne|rpl|rmi|rcc|rcs|rvc|rvs|seq|sne|spl|smi|scc|scs|svc|svs))\\s'
+       'name': 'keyword.control.statement.asm'
+      }
+      {
+       'match': '\\s*(?i:(add|sub|adb|sbb|adw|sbw|phr|plr|inw|inl|ind|dew|del|ded))\\s'
+       'name': 'keyword.control.statement.asm'
+      }
+      {
+       'match': '\\s*(?i:(mva|mvx|mvy|mwa|mwx|mwy|cpb|cpw|cpl|cpd))\\s'
+       'name': 'keyword.control.statement.asm'
+      }
+      {
+       'match': '\\s*(?i:(ift|if|els|else|eli|elseif|eif|ert|equ|ext))\\s'
+       'name': 'keyword.control.conditional.asm'
+      }
+    ]
+
+  'label':
+     'match': '^[\\s]*\\w+:'
+     'name': 'storage.type.function.asm'
+  'jumps':
+     'match': '\\s(?i:(jp|jr|djnz|ret|call))\\s'
+     'name': 'entity.name.function.asm'
+  'hexpats':
+    'patterns':[
+      {
+        'match': '\\$[0-9a-fA-F]+'
+        'name': 'constant.numeric.integer.hexadecimal.asm'
+      }
+      {
+        'match': '\\b[0-9a-fA-F]+[hH]\\b'
+        'name': 'constant.numeric.integer.hexadecimal.asm'
+      }
+     ]
+  'numpats':
+     'match': '\\b\\d+'
+     'name': 'constant.numeric.integer.decimal.asm'

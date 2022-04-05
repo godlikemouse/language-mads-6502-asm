@@ -1,0 +1,29 @@
+{
+  "activationCommands": {},
+  "bundleDependencies": false,
+  "name": "language-mads-6502-asm",
+  "version": "1.0.0",
+  "description": "Adds syntax highlighting for the MADS 6502 Atari  assembler.",
+  "dependencies": {},
+  "deprecated": false,
+  "engines": {
+    "atom": "*"
+  },
+  "keywords": [
+    "assembly",
+    "assembler",
+    "mads",
+    "6502"
+  ],
+  "license": "MIT",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
