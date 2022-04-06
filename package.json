@@ -17,10 +17,7 @@
     "6502"
   ],
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/godlikemouse/language-mads-6502-asm.git"
-  },
+  "repository": "https://github.com/godlikemouse/language-mads-6502-asm",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],
