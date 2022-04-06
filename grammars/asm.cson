@@ -55,7 +55,7 @@
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s*(?i:(proc|macro|local|end|endp|endm|endp|exitm))\\s'
+       'match': '\\s*(?i:(proc|macro|local|end|endp|endl|endm|endp|exitm))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
