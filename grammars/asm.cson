@@ -51,11 +51,11 @@
   'asmkey':
     'patterns': [
       {
-       'match': '\\s*(?i:(icl|ins|dta|run|ini|sin|rnd|opt|org|repeat|blk|set|nmb|rmb|lmb))\\s'
+       'match': '\\s*(?i:(icl|ins|dta|run|ini|sin|rnd|opt|org|\:repeat|blk|set|nmb|rmb|lmb))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s*(?i:(proc|macro|local|end|endp|endl|endm|mend|pend|exitm))\\s'
+       'match': '\\s*\\.(?i:(proc|macro|local|end|endp|endl|endm|mend|pend|exitm))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
@@ -79,33 +79,34 @@
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s*(?i:(byte|word|long|dword|var|reg))\\s'
+       'match': '\\s*\\.(?i:(byte|word|long|dword|var|reg))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s*(?i:(align|array|enda|aend|def|enum|ende|eend|error|extrn|ifdef|ifndef|link|nowarn|print))\\s'
+       'match': '\\s*\\.(?i:(align|array|enda|aend|def|enum|ende|eend|error|extrn|ifdef|ifndef|link|nowarn|print))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s*(?i:(pages|endpg|pgend|public|global|globl|rept|endr|rend|r|reloc|struct|ends|send|symbol))\\s'
+       'match': '\\s*\\.(?i:(pages|endpg|pgend|public|global|globl|rept|endr|rend|r|reloc|struct|ends|send|symbol))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s*(?i:(segdef|segment|endseg|using|use|zpvar|en|or|not|log|hi|db|dw|ds|by|wo|he|sb|cb|fl|adr|len|get|put|sav))\\s'
+       'match': '\\s*\\.(?i:(segdef|segment|endseg|using|use|zpvar))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s*(?i:(ift|if|els|else|eli|elseif|eif|ert|equ|ext))\\s'
+       'match': '\\s*\\.(?i:(en|or|not|log|hi|db|dw|ds|by|wo|he|sb|cb|fl|adr|len|get|put|sav))\\s'
+       'name': 'keyword.control.statement.asm'
+      }
+      {
+       'match': '\\s*\\.(?i:(ift|if|els|else|eli|elseif|eif|ert|equ|ext))\\s'
        'name': 'keyword.control.conditional.asm'
       }
     ]
 
   'label':
-     'match': '^[\\s]*\\w+:'
+     'match': '^(?!\\.\\=)\\w+$'
      'name': 'storage.type.function.asm'
-  'jumps':
-     'match': '\\s(?i:(jp|jr|djnz|ret|call))\\s'
-     'name': 'entity.name.function.asm'
   'hexpats':
     'patterns':[
       {
