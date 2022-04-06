@@ -71,6 +71,10 @@
        'name': 'keyword.control.statement.asm'
       }
       {
+       'match': '\\s(?i:(jeq|jne|jpl|jmi|jcc|jcs|jvc|jvs))\\s'
+       'name': 'keyword.control.statement.asm'
+      }
+      {
        'match': '\\s(?i:(add|sub|adb|sbb|adw|sbw|phr|plr|inw|inl|ind|dew|del|ded))\\s'
        'name': 'keyword.control.statement.asm'
       }
