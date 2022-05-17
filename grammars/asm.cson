@@ -51,7 +51,7 @@
   'asmkey':
     'patterns': [
       {
-       'match': '\\s(?i:(icl|ins|dta|run|ini|sin|rnd|opt|org|\:repeat|blk|set|nmb|rmb|lmb))\\s'
+       'match': '\\s(\\:\\d+\\s)?(?i:(icl|ins|dta|run|ini|sin|rnd|opt|org|\:repeat|blk|set|nmb|rmb|lmb))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
@@ -59,27 +59,27 @@
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s(?i:(adc|and|asl|bcc|bcs|beq|bit|bmi|bne|bpl|brk|bvc|bvs|clc|cld|cli|clv|cmp|cpx|cpy|dec|dex|dey|eor|inc|inx|iny|jmp|jsr))\\s'
+       'match': '\\s(\\:\\d+\\s)?(?i:(adc|and|asl|bcc|bcs|beq|bit|bmi|bne|bpl|brk|bvc|bvs|clc|cld|cli|clv|cmp|cpx|cpy|dec|dex|dey|eor|inc|inx|iny|jmp|jsr))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s(?i:(lda|ldx|ldy|lsr|nop|ora|pha|php|pla|plp|rol|ror|rti|rts|sbc|sec|sed|sei|sta|stx|sty|tax|tay|tsx|txa|txs|tya))\\s'
+       'match': '\\s(\\:\\d+\\s)?(?i:(lda|ldx|ldy|lsr|nop|ora|pha|php|pla|plp|rol|ror|rti|rts|sbc|sec|sed|sei|sta|stx|sty|tax|tay|tsx|txa|txs|tya))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s(?i:(req|rne|rpl|rmi|rcc|rcs|rvc|rvs|seq|sne|spl|smi|scc|scs|svc|svs))\\s'
+       'match': '\\s(\\:\\d+\\s)?(?i:(req|rne|rpl|rmi|rcc|rcs|rvc|rvs|seq|sne|spl|smi|scc|scs|svc|svs))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s(?i:(jeq|jne|jpl|jmi|jcc|jcs|jvc|jvs))\\s'
+       'match': '\\s(\\:\\d+\\s)?(?i:(jeq|jne|jpl|jmi|jcc|jcs|jvc|jvs))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s(?i:(add|sub|adb|sbb|adw|sbw|phr|plr|inw|inl|ind|dew|del|ded))\\s'
+       'match': '\\s(\\:\\d+\\s)?(?i:(add|sub|adb|sbb|adw|sbw|phr|plr|inw|inl|ind|dew|del|ded))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
-       'match': '\\s(?i:(mva|mvx|mvy|mwa|mwx|mwy|cpb|cpw|cpl|cpd))\\s'
+       'match': '\\s(\\:\\d+\\s)?(?i:(mva|mvx|mvy|mwa|mwx|mwy|cpb|cpw|cpl|cpd))\\s'
        'name': 'keyword.control.statement.asm'
       }
       {
@@ -109,7 +109,7 @@
     ]
 
   'label':
-     'match': '^(?!\\.\\=)\\w+$'
+     'match': '^(?!\\.\\=)\\??\\w+\\s*$'
      'name': 'storage.type.function.asm'
   'hexpats':
     'patterns':[
