@@ -1,5 +1,5 @@
 'scopeName': 'source.asm'
-'name': 'Assembler'
+'name': 'MADS Assembler'
 'fileTypes': [
   'asm'
 ]
